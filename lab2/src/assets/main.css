@@ -1,0 +1,13 @@
+body {
+  background-image: url("./bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  box-sizing: border-box;
+}
