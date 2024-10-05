@@ -154,10 +154,10 @@ export default {
     methods: {
         filterByRatingOrDate() {
             if (this.sortByRating) {
-                this.filteredPersons = _.orderBy(this.persons, ['PubDate'], ['desc']);
+                this.filteredPersons = _.orderBy(this.persons, ['Rating'], ['desc']);
                 this.filterItem = 'PubDate';
             } else {
-                this.filteredPersons = _.orderBy(this.persons, ['Rating'], ['desc']);
+                this.filteredPersons = _.orderBy(this.persons, ['PubDate'], ['desc']);
                 this.filterItem = 'Rating';
             }
 
@@ -213,6 +213,10 @@ export default {
         },
         incrementStars(person) {
             person.Rating += 0.1;
+            if (!this.sortByRating) {
+                this.filteredPersons = _.orderBy(this.persons, ['Rating'], ['desc']);
+                this.filterItem = 'PubDate';
+            }
         },
     }
 }
