@@ -440,7 +440,7 @@ export default {
 
 .header {
     margin-top: 6px;
-    padding: 6px 0;
+    padding: 6px 12px;
     width: 100vw;
     display: flex;
     gap: 20px;

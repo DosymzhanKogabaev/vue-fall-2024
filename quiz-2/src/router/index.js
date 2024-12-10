@@ -1,0 +1,18 @@
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '../pages/Home.vue';
+
+const routes = [
+    { path: '/', component: Home },
+    { 
+      path: '/user/:id', 
+      component: () => import('../pages/UserDetails.vue') // Lazy loading
+    }
+  ];
+  
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;
