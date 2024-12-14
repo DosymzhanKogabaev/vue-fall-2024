@@ -7,7 +7,7 @@
                     with honest reviews
                 </div>
                 <div class="text-xl mt-8">
-                    LoremIpsum - the largest resource<br />
+                    Jumys.kz - the largest resource<br />
                     with reviews from employees.<br /><br />
                     Your feedback helps people make<br />informed career decisions.
                 </div>

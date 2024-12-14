@@ -60,15 +60,17 @@
                                 <li>
                                     <nuxt-link :to="`/company/${companyName}?tab=salaries`"
                                         :class="{ 'bg-[#f4f9ff] border-t-2 border-[#3460a4]': tab === 'salaries' }"
-                                        class="flex px-3 py-4">
-                                        Salaries
+                                        class="flex gap-x-2 px-3 py-4">
+                                        <div>Vacancies</div>
+                                        <div class="text-[#757575]">{{ company.salaries.length }}</div>
                                     </nuxt-link>
                                 </li>
                                 <li>
                                     <nuxt-link :to="`/company/${companyName}?tab=interviews`"
                                         :class="{ 'bg-[#f4f9ff] border-t-2 border-[#3460a4]': tab === 'interviews' }"
-                                        class="flex px-3 py-4">
-                                        Interviews
+                                        class="flex gap-x-2 px-3 py-4">
+                                        <div>Interviews</div>
+                                        <div class="text-[#757575]">{{ company.interviews.length }}</div>
                                     </nuxt-link>
                                 </li>
                             </ul>

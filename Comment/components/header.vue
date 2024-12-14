@@ -1,5 +1,5 @@
 <template>
-    <div class="border-b shadow-lg py-4">
+    <div :class="this.theme === 'light' ? ['border-b', 'shadow-lg', 'py-4'] : ['border-b', 'shadow-lg', 'py-4', 'bg-[#ccc]']">
         <div class="wrapper flex items-center justify-between">
             <div class="flex gap-x-8 items-center">
                 <NuxtLink to="/">
@@ -8,6 +8,13 @@
                 <SearchCompanies :companies="companies" />
             </div>
             <div class="flex" v-if="isAuth">
+                <NuxtLink v-if="isUser" to="/add-interview-to-company" class="h-full py-6 px-6 hover:bg-[#f4f9ff]">
+                    <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#3460A4">
+                        <path
+                            d="M12 2A10 10 0 0 0 2 12a9.9 9.9 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20m0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20m3-9h-2V9a1 1 0 1 0-2 0v2H9a1 1 0 0 0 0 2h2v2a1 1 0 0 0 2 0v-2h2a1 1 0 1 0 0-2" />
+                    </svg>
+                    <div class="text-[#3460A4]">Submit Interview</div>
+                </NuxtLink>
                 <NuxtLink to="/add-review-to-company" class="h-full py-6 px-6 hover:bg-[#f4f9ff]">
                     <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#3460A4">
                         <path
@@ -15,12 +22,6 @@
                     </svg>
                     <div class="text-[#3460A4]">Leave Review</div>
                 </NuxtLink>
-                <button class="h-full py-6 px-6 hover:bg-[#f4f9ff]">
-                    <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#3460A4">
-                        <path d="M20 17h2v2H2v-2h2v-7a8 8 0 1 1 16 0zm-2 0v-7a6 6 0 0 0-12 0v7zm-9 4h6v2H9z" />
-                    </svg>
-                    <div class="text-[#3460A4]">Notifications</div>
-                </button>
                 <button @click="navigateToProfile" class="h-full py-6 px-6 hover:bg-[#f4f9ff]" type="button">
                     <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="#3460A4">
                         <path
@@ -64,6 +65,7 @@ export default {
             logo,
             isAuth: this.isAuthorized(),
             isUser: this.isAuthorizedUser(),
+            theme: localStorage.getItem("theme") || "light",
         };
     },
     methods: {
@@ -75,6 +77,16 @@ export default {
         },
         navigateToProfile() {
             this.$router.push('/profile');
+        },
+        changeTheme() {
+            const theme = localStorage.getItem('theme') || "light";
+            if(theme === "light") {
+                localStorage.setItem('theme', "dark");
+            }
+            else {
+                localStorage.setItem('theme', "light");
+            }
+            this.theme = localStorage.getItem('theme')
         },
     },
 };

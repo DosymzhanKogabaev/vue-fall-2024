@@ -76,6 +76,7 @@ export default {
                 newAuthors[comment.authorId] = author;
             }
             this.authors = newAuthors;
+            console.log(newAuthors)
         },
         async getCommentsList(company) {
             return company.comments || [];

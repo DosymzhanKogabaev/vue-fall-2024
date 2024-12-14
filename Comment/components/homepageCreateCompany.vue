@@ -1,6 +1,6 @@
 <template>
     <div class="w-full bg-[#f4f9ff] py-24 mt-6">
-        <div class="wrapper grid grid-cols-2">
+        <div class="wrapper grid grid-cols-2 items-center">
             <div>
                 <div class="text-4xl font-medium">
                     Create your own<br />
@@ -8,7 +8,7 @@
                 </div>
                 <div class="text-xl mt-8">
                     Work with your employer brand by managing <br />
-                    your company page on LoremIpsum
+                    your company page on Jumys.kz
                 </div>
                 <nuxt-link to="/signUp?type=company">
                     <button
@@ -21,8 +21,10 @@
                     </button>
                 </nuxt-link>
             </div>
-            <div class="bg-[#adf] flex">
-                <div class="m-auto text-6xl">some image</div>
+            <div class="flex">
+                <div class="flex w-full ml-20">
+                <img src="../assets/new-company-logo.png" alt="register-company" class="rounded-3xl m-auto  shadow-2xl">
+            </div>
             </div>
         </div>
     </div>
@@ -34,6 +36,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

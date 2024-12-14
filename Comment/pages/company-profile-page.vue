@@ -152,7 +152,7 @@
 </template>
 
 <script>
-import { ref, reactive, onMounted, watch } from "vue";
+import { ref, onMounted, watch } from "vue";
 import Sidebar from "@/components/sidebar.vue";
 import StarRating from "@/components/starRating.vue";
 import { comparePasswords, changeCompanyPassword } from "@/services/companyService";

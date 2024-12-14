@@ -1,10 +1,10 @@
 <template>
     <div class="py-8 wrapper">
         <div class="text-center text-3xl font-medium">
-            LoremIpsum helps people find their dream job
+            Jumys.kz helps people find their dream job
         </div>
         <div class="text-center text-xl mt-4">
-            Stories of real people who use LoremIpsum
+            Stories of real people who use Jumys.kz
         </div>
         <div class="grid grid-cols-3 gap-x-8 mt-4">
             <div class="shadow-xl border-0 rounded-2xl">
@@ -34,7 +34,7 @@
                         <img class="w-1/2 border-0 rounded-full mx-auto" :src="emma" alt="Emma" />
                         <div class="text-center my-auto">
                             Due to previous bad experiences, it was important for me to find a company where a
-                            non-aggressive atmosphere prevails. After reading reviews from real people on LoremIpsum, I
+                            non-aggressive atmosphere prevails. After reading reviews from real people on Jumys.kz, I
                             was able to find a suitable.
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                     <div class="pt-6 px-6 pb-8 bg-[#f4fcf8] border-0 rounded-t-2xl h-full flex flex-col">
                         <img class="w-1/2 border-0 rounded-full mx-auto" :src="elizabeth" alt="Elizabeth" />
                         <div class="text-center my-auto">
-                            Thanks to the LoremIpsum website, I was able to figure out what the most in-demand
+                            Thanks to the Jumys.kz website, I was able to figure out what the most in-demand
                             professions are now and what the salaries are. I made my choice, took the courses and now I
                             earn more.
                         </div>

@@ -27,6 +27,9 @@
 
 <script>
 export default {
+    data() {
+        return {theme: localStorage.getItem("theme") || "light"}
+    },
     props: {
         company: {
             type: Object,

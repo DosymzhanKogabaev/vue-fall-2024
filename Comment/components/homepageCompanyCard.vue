@@ -23,7 +23,7 @@
                 <nuxt-link :to="`/company/${company.companyName}?tab=reviews`">Reviews</nuxt-link>
             </div>
             <div class="w-full text-center border-l border-r">
-                <nuxt-link :to="`/company/${company.companyName}?tab=salaries`">Salaries</nuxt-link>
+                <nuxt-link :to="`/company/${company.companyName}?tab=salaries`">Vacancies</nuxt-link>
             </div>
             <div class="mx-auto">
                 <nuxt-link :to="`/company/${company.companyName}?tab=interviews`">Interviews</nuxt-link>
