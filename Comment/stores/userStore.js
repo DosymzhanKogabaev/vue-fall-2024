@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import axios from 'axios';
 
-const api = 'http://localhost:3001';
+const api = 'http://comment-service-backend.onrender.com';
 
 export const useUserStore = defineStore('user', {
     state: () => ({

@@ -137,7 +137,7 @@ export default {
                     description: editDescription.value,
                     salary: editSalary.value,
                 }
-                const res = await axios.patch(`http://localhost:3001/salaries/${selectedSalary.value._id}`, salaryobj);
+                const res = await axios.patch(`http://comment-service-backend.onrender.com/salaries/${selectedSalary.value._id}`, salaryobj);
                 alert("Vacancy information updated!");
                 setEditMode(false, salaryobj);
                 window.location.reload(); 
@@ -156,7 +156,7 @@ export default {
                     description: addDescription.value,
                     salary: addSalary.value,
                 }
-                const res = await axios.post(`http://localhost:3001/salaries/`, salaryobj);
+                const res = await axios.post(`http://comment-service-backend.onrender.com/salaries/`, salaryobj);
                 alert("Vacancy was successfully added!");
                 setAddMode(false);
                 window.location.reload(); 
@@ -168,7 +168,7 @@ export default {
             var answer = window.confirm("Are you sure you want to delete this vacancy?");
             if(answer) {
                 try {
-                    await axios.delete(`http://localhost:3001/salaries/${vacancy._id}`);
+                    await axios.delete(`http://comment-service-backend.onrender.com/salaries/${vacancy._id}`);
                     alert("Vacancy was successfully deleted!");
                     window.location.reload(); 
                 } catch (error) {

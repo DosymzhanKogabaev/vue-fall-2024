@@ -193,7 +193,7 @@ const handleSendReview = async () => {
                 isCurrent: isCurrent.value,
                 recommend: recommend.value,
             };
-            await axios.post('http://localhost:3001/comments', reviewData);
+            await axios.post('http://comment-service-backend.onrender.com/comments', reviewData);
             isSuccessful = true;
         } catch (error) {
             console.error('Error sending review:', error);

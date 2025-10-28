@@ -1,7 +1,7 @@
 import axios from "axios";
 import bcrypt from 'bcryptjs';
 
-const url = process.env.API_URL || 'http://localhost:3001';
+const url = process.env.API_URL || 'http://comment-service-backend.onrender.com';
 
 export async function getUsersList() {
     try {

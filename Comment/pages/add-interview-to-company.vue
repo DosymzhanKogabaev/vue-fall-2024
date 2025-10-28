@@ -130,7 +130,7 @@ const handleSendReview = async () => {
                 difficulty: selectedDifficulty.value,
                 jobTitle: jobTitle.value,
             };
-            await axios.post('http://localhost:3001/interviews', interviewData);
+            await axios.post('http://comment-service-backend.onrender.com/interviews', interviewData);
             isSuccessful = true;
         } catch (error) {
             console.error('Error sending interview:', error);

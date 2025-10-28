@@ -235,7 +235,7 @@ export default {
                     description: description.value,
                     imgUrl: imgUrl.value
                 }
-                const res = await axios.patch(`http://localhost:3001/companies/${company.value._id}`, companyobj);
+                const res = await axios.patch(`http://comment-service-backend.onrender.com/companies/${company.value._id}`, companyobj);
                 localStorage.setItem('company', JSON.stringify(res.data))
                 company.value = JSON.parse(localStorage.getItem("company")) || {}
                 alert("Company information updated!");
